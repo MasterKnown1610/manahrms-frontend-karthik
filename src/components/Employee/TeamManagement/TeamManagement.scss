@@ -1,0 +1,194 @@
+@import '../../../styles/variables.scss';
+
+.team-management {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+  }
+
+  &__filters {
+    display: flex;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__stat-card {
+    .ant-card-body {
+      padding: $spacing-md;
+    }
+  }
+
+  &__stat-content {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__stat-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__stat-label {
+    font-size: 12px;
+    color: $text-secondary;
+  }
+
+  &__hierarchy {
+    margin-bottom: $spacing-xl;
+  }
+
+  &__hierarchy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__hierarchy-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__tree-container {
+    padding: $spacing-md;
+    background-color: $background;
+    border-radius: $radius-md;
+    min-height: 400px;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+
+  &__tree {
+    .ant-tree-node-content-wrapper {
+      padding: $spacing-xs 0;
+    }
+
+    .ant-tree-node-selected {
+      background-color: transparent !important;
+    }
+  }
+
+  &__tree-node {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__node-info {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__node-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  &__team-details {
+    margin-top: $spacing-xl;
+  }
+
+  &__team-card {
+    height: 100%;
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: $shadow-md;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__team-info {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__team-lead {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__team-lead-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 2px;
+  }
+
+  &__team-lead-role {
+    font-size: 12px;
+    color: $text-secondary;
+  }
+
+  &__team-members-count {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: $text-secondary;
+    padding: $spacing-sm;
+    background-color: $background;
+    border-radius: $radius-md;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-management {
+    &__header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__filters {
+      width: 100%;
+      
+      > * {
+        flex: 1;
+      }
+    }
+
+    &__stats {
+      grid-template-columns: 1fr;
+    }
+
+    &__hierarchy-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-md;
+    }
+  }
+}
+

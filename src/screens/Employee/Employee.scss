@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.employee {
+  padding: $spacing-lg;
+  background-color: $background;
+  min-height: calc(100vh - 100px);
+
+  &__header {
+    margin-bottom: $spacing-xl;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 $spacing-xs 0;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: $text-secondary;
+    margin: 0;
+  }
+
+  &__content {
+    background-color: $white;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    box-shadow: $shadow-sm;
+  }
+
+  &__tabs {
+    .ant-tabs-tab {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .ant-tabs-content-holder {
+      padding-top: $spacing-lg;
+    }
+  }
+}
+

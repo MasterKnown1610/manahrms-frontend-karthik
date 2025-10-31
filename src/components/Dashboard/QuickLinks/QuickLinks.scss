@@ -1,0 +1,17 @@
+@import '../../../styles/variables.scss';
+
+.quick-links {
+  background-color: $secondary;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  width: 100%;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0;
+    text-align: left;
+  }
+}
+

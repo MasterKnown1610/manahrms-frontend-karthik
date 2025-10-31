@@ -1,0 +1,108 @@
+@import '../../../styles/variables.scss';
+
+.task-view-modal {
+  .ant-modal-header {
+    border-bottom: 2px solid $secondary;
+  }
+
+  .ant-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__content {
+    padding: $spacing-md 0;
+  }
+
+  &__header {
+    margin-bottom: $spacing-xl;
+    padding-bottom: $spacing-lg;
+    border-bottom: 1px solid $secondary;
+  }
+
+  &__title-section {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__detail-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-lg;
+  }
+
+  &__detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__detail-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__detail-value {
+    font-size: 16px;
+    color: $text-primary;
+    font-weight: 500;
+  }
+
+  &__project {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__project-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: $radius-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  &__tags {
+    display: flex;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+    margin-top: $spacing-xs;
+  }
+
+  &__tag {
+    padding: 6px 12px;
+    border-radius: $radius-md;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+  }
+}
+

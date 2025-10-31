@@ -1,0 +1,37 @@
+@import '../../../styles/variables.scss';
+
+.promotion-card {
+  text-align: center;
+  padding: $spacing-xl;
+
+  &__icon {
+    font-size: 48px;
+    color: $primary;
+    margin-bottom: $spacing-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+    line-height: 1.5;
+  }
+
+  &__button {
+    padding: $spacing-md $spacing-lg;
+    border-radius: $radius-md;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-primary;
+    width: 100%;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+

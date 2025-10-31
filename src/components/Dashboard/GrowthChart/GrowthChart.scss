@@ -1,0 +1,33 @@
+@import '../../../styles/variables.scss';
+
+.growth-chart {
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__highlight {
+    margin-top: $spacing-md;
+    display: flex;
+    justify-content: center;
+    gap: $spacing-lg;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-secondary;
+  }
+
+  &__legend-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: $radius-full;
+  }
+}
+

@@ -1,0 +1,166 @@
+@import '../../styles/variables.scss';
+
+$sidebar-collapsed-width: 80px;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: $sidebar-width;
+  right: 0;
+  height: 100px;
+  padding: 0 $spacing-xl;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  box-shadow: $shadow-sm;
+  transition: left 0.3s ease;
+
+  &--collapsed {
+    left: $sidebar-collapsed-width;
+  }
+
+  &__left {
+    flex: 1;
+  }
+
+  &__greeting {
+    .navbar__title {
+      font-size: 28px;
+      font-weight: 600;
+      color: $text-primary;
+      margin-bottom: $spacing-xs;
+    }
+
+    .navbar__subtitle {
+      font-size: 14px;
+      color: $text-secondary;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &-input {
+      width: 300px;
+      padding: $spacing-md $spacing-lg;
+      padding-right: 45px;
+      border: 1px solid $secondary;
+      border-radius: $radius-full;
+      font-size: 14px;
+      background-color: $background;
+      color: $text-primary;
+
+      &::placeholder {
+        color: $text-light;
+      }
+
+      &:focus {
+        border-color: $primary;
+        background-color: $white;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      right: $spacing-md;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__notifications {
+    position: relative;
+
+    &-btn {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $radius-full;
+      background-color: $background;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+
+    &-icon {
+      font-size: 24px;
+      color: $text-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__notification-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: $error;
+    border-radius: $radius-full;
+    border: 2px solid $white;
+    z-index: 1;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-full;
+    overflow: hidden;
+    border: 2px solid $secondary;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__profile-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-primary;
+    line-height: 1.2;
+  }
+
+  &__profile-role {
+    font-size: 12px;
+    color: $text-secondary;
+    line-height: 1.2;
+  }
+}
+

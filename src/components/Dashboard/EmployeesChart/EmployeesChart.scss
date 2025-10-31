@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.employees-chart {
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+  }
+}
+

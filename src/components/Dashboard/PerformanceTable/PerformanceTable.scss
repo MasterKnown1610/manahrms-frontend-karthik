@@ -1,0 +1,92 @@
+@import '../../../styles/variables.scss';
+
+.performance-table {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-sm $spacing-md;
+    background-color: $background;
+    border-radius: $radius-md;
+    font-size: 14px;
+    color: $text-primary;
+    transition: background-color 0.2s ease;
+
+    svg {
+      font-size: 18px;
+    }
+
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+
+  &__container {
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        border-bottom: 2px solid $secondary;
+      }
+
+      th {
+        padding: $spacing-md;
+        text-align: left;
+        font-size: 12px;
+        font-weight: 600;
+        color: $text-secondary;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $secondary;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: $background;
+        }
+      }
+
+      td {
+        padding: $spacing-md;
+        font-size: 14px;
+        color: $text-primary;
+      }
+    }
+  }
+
+  &__employee {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: $radius-full;
+    border: 2px solid $secondary;
+  }
+}
+

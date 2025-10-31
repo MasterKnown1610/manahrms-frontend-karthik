@@ -1,0 +1,112 @@
+@import '../../styles/variables.scss';
+
+.checkbox-table {
+  background: $white;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-md;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-lg;
+    border-bottom: 1px solid $secondary;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: $spacing-md;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: $spacing-md;
+    }
+  }
+
+  &__table-wrapper {
+    overflow-x: auto;
+  }
+
+  &__table {
+    .ant-table {
+      font-size: 14px;
+    }
+
+    .ant-table-thead > tr > th {
+      background: $background;
+      color: $text-primary;
+      font-weight: 600;
+      border-bottom: 2px solid $secondary;
+      padding: $spacing-md;
+      
+      .anticon {
+        color: $text-secondary;
+        font-size: 12px;
+      }
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: $spacing-md;
+      border-bottom: 1px solid $secondary;
+      color: $text-primary;
+    }
+
+    .ant-table-tbody > tr:hover > td {
+      background-color: $background;
+    }
+
+    .ant-checkbox-wrapper {
+      .ant-checkbox {
+        .ant-checkbox-inner {
+          border-radius: $radius-sm;
+          border-color: $secondary;
+          
+          &:after {
+            border-color: $white;
+          }
+        }
+
+        &.ant-checkbox-checked .ant-checkbox-inner {
+          background-color: $primary;
+          border-color: $primary;
+        }
+
+        &.ant-checkbox-disabled .ant-checkbox-inner {
+          background-color: $background;
+          border-color: $secondary;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  &__star-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__star {
+    font-size: 20px;
+    color: $text-secondary;
+    transition: all 0.2s ease;
+
+    &--filled {
+      color: #FBBF24;
+      fill: #FBBF24;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+

@@ -1,0 +1,140 @@
+@import '../../styles/variables.scss';
+
+.dashboard {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  background-color: $background;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__row {
+    display: flex;
+    gap: $spacing-lg;
+    width: 100%;
+
+    &--quicklinks {
+      align-items: flex-start;
+      gap: $spacing-xl;
+    }
+
+    &--graphs {
+      margin-top: $spacing-lg;
+      gap: $spacing-lg;
+
+      .dashboard__graph-card {
+        flex: 1;
+        min-height: 300px;
+      }
+    }
+
+    &--data-cards {
+      gap: $spacing-lg;
+
+      > * {
+        flex: 1;
+        min-width: 0;
+      }
+    }
+  }
+
+  &__left-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    min-width: 300px;
+  }
+
+  &__right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    padding: $spacing-lg;
+  }
+
+  &__bottom-section {
+    margin-top: $spacing-lg;
+    padding: $spacing-lg;
+  }
+
+  &__graph-card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 1400px) {
+  .dashboard {
+    &__row--quicklinks {
+      flex-direction: column;
+    }
+
+    &__left-section,
+    &__right-section {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+
+    &__row--graphs {
+      flex-direction: column;
+
+      .dashboard__graph-card {
+        width: 100%;
+      }
+    }
+
+    &__row--data-cards {
+      flex-wrap: wrap;
+
+      > * {
+        flex: 1 1 calc(50% - #{$spacing-lg / 2});
+        min-width: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    &__main {
+      margin-left: 0;
+    }
+
+    &__row {
+      flex-direction: column;
+
+      &--quicklinks {
+        gap: $spacing-lg;
+      }
+
+      &--graphs,
+      &--data-cards {
+        flex-direction: column;
+
+        > * {
+          width: 100%;
+          flex: 1 1 100%;
+        }
+      }
+    }
+
+    &__left-section,
+    &__right-section {
+      width: 100%;
+    }
+  }
+}
+

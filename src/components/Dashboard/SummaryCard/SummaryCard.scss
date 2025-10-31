@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+
+.summary-card {
+  padding: $spacing-xl;
+  border-radius: $radius-lg;
+  color: $white;
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  box-shadow: $shadow-md;
+
+  &__icon {
+    font-size: 48px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  &__value {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+

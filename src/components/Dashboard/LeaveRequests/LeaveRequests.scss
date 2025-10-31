@@ -1,0 +1,151 @@
+@import '../../../styles/variables.scss';
+
+.leave-requests {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-md;
+    border-bottom: 1px solid $secondary;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-primary;
+
+    h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &__count {
+    background-color: $primary;
+    color: $white;
+    padding: 4px 12px;
+    border-radius: $radius-full;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    max-height: 400px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $background;
+      border-radius: $radius-md;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $secondary;
+      border-radius: $radius-md;
+
+      &:hover {
+        background: $text-secondary;
+      }
+    }
+  }
+
+  &__item {
+    padding: $spacing-md;
+    background-color: $background;
+    border-radius: $radius-md;
+    border: 1px solid $secondary;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: $primary;
+      box-shadow: 0 2px 8px rgba(92, 33, 144, 0.1);
+    }
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__employee {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__employee-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-right: $spacing-xs;
+  }
+
+  &__badge {
+    padding: 2px 8px;
+    border-radius: $radius-sm;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__status {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__item-details {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__detail-row {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: $text-secondary;
+  }
+
+  &__date {
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  &__leave-type {
+    font-weight: 500;
+    color: $text-primary;
+    margin-right: $spacing-xs;
+  }
+
+  &__days {
+    color: $text-secondary;
+    font-size: 12px;
+  }
+
+  &__empty {
+    text-align: center;
+    padding: $spacing-xl;
+    color: $text-secondary;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+  }
+}
+

@@ -1,0 +1,198 @@
+@import '../../styles/variables.scss';
+
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+  padding: $spacing-lg;
+
+  &__container {
+    background: $white;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-lg;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__left {
+    background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+    padding: $spacing-2xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-2xl;
+  }
+
+  &__logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: $radius-md;
+  }
+
+  &__brand-name {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: $spacing-md;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  &__right {
+    padding: $spacing-2xl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: $spacing-xl;
+    text-align: center;
+  }
+
+  &__field {
+    margin-bottom: $spacing-lg;
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__input {
+    width: 100%;
+    padding: $spacing-md;
+    border: 1px solid $secondary;
+    border-radius: $radius-md;
+    font-size: 14px;
+    color: $text-primary;
+    transition: all 0.2s ease;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 3px rgba(92, 33, 144, 0.1);
+    }
+
+    &::placeholder {
+      color: $text-light;
+    }
+  }
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    font-size: 14px;
+    color: $text-secondary;
+    cursor: pointer;
+
+    input[type='checkbox'] {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+
+  &__forgot {
+    font-size: 14px;
+    color: $primary;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: $spacing-md;
+    border-radius: $radius-md;
+    font-size: 16px;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: $spacing-lg;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &__register {
+    text-align: center;
+    font-size: 14px;
+    color: $text-secondary;
+
+    a {
+      color: $primary;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__left {
+      display: none;
+    }
+  }
+}
+

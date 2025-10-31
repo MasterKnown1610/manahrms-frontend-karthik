@@ -1,0 +1,49 @@
+@import '../../../styles/variables.scss';
+
+.task-add-modal {
+  .ant-modal-header {
+    border-bottom: 2px solid $secondary;
+  }
+
+  .ant-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__form {
+    padding: $spacing-md 0;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-md;
+  }
+
+  &__half {
+    margin-bottom: 0;
+  }
+
+  .ant-form-item-label > label {
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  .ant-input,
+  .ant-select-selector,
+  .ant-picker {
+    border-color: $secondary;
+
+    &:hover {
+      border-color: $primary;
+    }
+
+    &:focus,
+    &.ant-picker-focused {
+      border-color: $primary;
+      box-shadow: 0 0 0 2px rgba(92, 33, 144, 0.1);
+    }
+  }
+}
+

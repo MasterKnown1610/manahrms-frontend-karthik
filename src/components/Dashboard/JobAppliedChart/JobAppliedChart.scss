@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.job-applied-chart {
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__highlight {
+    margin-top: $spacing-md;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: $chart-green;
+  }
+}
+

@@ -1,0 +1,93 @@
+@import '../../../styles/variables.scss';
+
+.project-overview {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__count {
+    font-size: 14px;
+    color: $text-secondary;
+  }
+
+  &__progress {
+    margin-bottom: $spacing-lg;
+  }
+
+  &__progress-bar {
+    display: flex;
+    height: 24px;
+    border-radius: $radius-md;
+    overflow: hidden;
+    background-color: $secondary;
+  }
+
+  &__progress-segment {
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+
+  &__legend {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__legend-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: $radius-full;
+  }
+
+  &__legend-label {
+    flex: 1;
+    font-size: 14px;
+    color: $text-secondary;
+  }
+
+  &__legend-count {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__button {
+    width: 100%;
+    padding: $spacing-md;
+    background-color: $background;
+    border-radius: $radius-md;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-primary;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+
+    svg {
+      font-size: 18px;
+    }
+
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+}
+

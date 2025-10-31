@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+$sidebar-collapsed-width: 80px;
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: $background;
+
+  &__main {
+    flex: 1;
+    margin-left: $sidebar-width;
+    margin-top: 100px;
+    padding: $spacing-xl;
+    width: calc(100% - #{$sidebar-width});
+    transition: margin-left 0.3s ease, width 0.3s ease;
+
+    &--collapsed {
+      margin-left: $sidebar-collapsed-width;
+      width: calc(100% - #{$sidebar-collapsed-width});
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    &__main {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
