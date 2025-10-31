@@ -1,7 +1,6 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .employee {
-  padding: $spacing-lg;
   background-color: $background;
   min-height: calc(100vh - 100px);
 
@@ -40,4 +39,3 @@
     }
   }
 }
-

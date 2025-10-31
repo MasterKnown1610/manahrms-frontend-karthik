@@ -10,6 +10,13 @@
     flex-wrap: wrap;
   }
 
+  &__header-actions {
+    display: flex;
+    gap: $spacing-md;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   &__title-section {
     display: flex;
     align-items: center;
@@ -98,8 +105,14 @@
     color: $text-primary;
   }
 
+  &__dept-actions {
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-sm;
+  }
+
   &__dept-managers {
     margin-top: $spacing-md;
+    margin-bottom: $spacing-md;
   }
 
   &__managers-title {

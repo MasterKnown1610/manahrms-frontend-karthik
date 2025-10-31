@@ -1,0 +1,37 @@
+@import '../../../styles/variables.scss';
+
+.add-department-modal {
+  .ant-modal-header {
+    border-bottom: 2px solid $secondary;
+  }
+
+  .ant-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__form {
+    padding: $spacing-md 0;
+  }
+
+  .ant-form-item-label > label {
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  .ant-input,
+  .ant-input {
+    border-color: $secondary;
+
+    &:hover {
+      border-color: $primary;
+    }
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 2px rgba(92, 33, 144, 0.1);
+    }
+  }
+}
+

@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, Tree, Select, Button, Space, Avatar, Tag, Empty, Row, Col, Statistic } from 'antd';
 import { MdPeople, MdGroup, MdPerson, MdArrowForward, MdAccountTree } from 'react-icons/md';
 import { useTheme } from '../../../contexts/ThemeContext';
@@ -9,6 +10,7 @@ const { Option } = Select;
 
 const TeamManagement = () => {
   const { theme } = useTheme();
+  const navigate = useNavigate();
   const [selectedDepartment, setSelectedDepartment] = useState('all');
 
   // Build hierarchy from employee data
@@ -176,7 +178,11 @@ const TeamManagement = () => {
       <Card className="team-management__hierarchy">
         <div className="team-management__hierarchy-header">
           <h3 className="team-management__hierarchy-title">Organizational Hierarchy</h3>
-          <Button type="text" icon={<MdArrowForward />}>
+          <Button 
+            type="text" 
+            icon={<MdArrowForward />}
+            onClick={() => navigate('/organization-chart')}
+          >
             View Full Chart
           </Button>
         </div>

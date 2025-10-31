@@ -33,11 +33,6 @@ const Employee = () => {
 
   return (
     <div className="employee">
-      <div className="employee__header">
-        <h1 className="employee__title">Employee Management</h1>
-        <p className="employee__subtitle">Manage employees, roles, and team structure</p>
-      </div>
-
       <div className="employee__content">
         <Tabs
           activeKey={activeTab}

@@ -7,6 +7,7 @@ import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
 import Dashboard from './screens/Dashboard/Dashboard';
 import Employee from './screens/Employee/Employee';
+import OrganizationChart from './screens/OrganizationChart/OrganizationChart';
 import Task from './screens/Task/Task';
 import Report from './screens/Report/Report';
 import Calendar from './screens/Calendar/Calendar';
@@ -32,6 +33,7 @@ function App() {
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/organization-chart" element={<OrganizationChart />} />
               <Route element={<Layout />}>
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/employee" element={<Employee />} />

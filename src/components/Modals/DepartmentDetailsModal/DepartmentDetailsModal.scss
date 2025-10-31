@@ -1,0 +1,71 @@
+@import '../../../styles/variables.scss';
+
+.department-details-modal {
+  &__content {
+    padding: $spacing-md;
+  }
+
+  &__header {
+    margin-bottom: $spacing-xl;
+    padding-bottom: $spacing-lg;
+    border-bottom: 2px solid $secondary;
+  }
+
+  &__header-left {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: $radius-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 $spacing-xs 0;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: $text-secondary;
+    margin: 0;
+  }
+
+  &__stats {
+    margin-bottom: $spacing-xl;
+  }
+
+  &__section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0 0 $spacing-lg 0;
+  }
+
+  &__managers {
+    margin-bottom: $spacing-xl;
+  }
+
+  &__manager-card {
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: $shadow-md;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__employees {
+    margin-top: $spacing-xl;
+  }
+}
+

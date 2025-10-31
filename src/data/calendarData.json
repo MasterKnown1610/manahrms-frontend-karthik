@@ -1,0 +1,213 @@
+{
+  "user": {
+    "name": "Rylan Woods",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rylan",
+    "email": "rylan.woods@manahrms.com"
+  },
+  "calendarTypes": [
+    {
+      "id": "personal",
+      "name": "Personal Calendar",
+      "color": "#5C2190",
+      "enabled": true
+    },
+    {
+      "id": "birthdays",
+      "name": "Birthdays",
+      "color": "#52c41a",
+      "enabled": true
+    },
+    {
+      "id": "reminders",
+      "name": "Reminders",
+      "color": "#fa8c16",
+      "enabled": true
+    },
+    {
+      "id": "tasks",
+      "name": "Tasks",
+      "color": "#eb2f96",
+      "enabled": true
+    },
+    {
+      "id": "meetings",
+      "name": "Meetings",
+      "color": "#1890ff",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Team Meeting with Isaac Sanchez",
+      "type": "meetings",
+      "date": "2025-11-07",
+      "startTime": "07:00",
+      "endTime": "08:00",
+      "description": "Weekly team sync meeting",
+      "attendees": ["Isaac Sanchez"],
+      "location": "Conference Room A",
+      "color": "#5C2190",
+      "calendarType": "personal"
+    },
+    {
+      "id": 2,
+      "title": "Talk to Bobby L...",
+      "type": "tasks",
+      "date": "2025-11-08",
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "description": "Discuss project updates",
+      "attendees": ["Bobby L"],
+      "location": "Virtual",
+      "color": "#eb2f96",
+      "calendarType": "tasks"
+    },
+    {
+      "id": 3,
+      "title": "Meeting with Michael",
+      "type": "meetings",
+      "date": "2025-11-09",
+      "startTime": "16:21",
+      "endTime": "17:00",
+      "description": "One-on-one discussion",
+      "attendees": ["Michael"],
+      "location": "Office",
+      "color": "#5C2190",
+      "calendarType": "personal"
+    },
+    {
+      "id": 4,
+      "title": "Albert Mullen Meeting",
+      "type": "meetings",
+      "date": "2025-10-31",
+      "startTime": "22:30",
+      "endTime": "23:30",
+      "description": "Client discussion",
+      "attendees": ["Albert Mullen"],
+      "location": "Virtual",
+      "color": "#5C2190",
+      "calendarType": "personal"
+    },
+    {
+      "id": 5,
+      "title": "Chimbo Muskin 🎂",
+      "type": "birthdays",
+      "date": "2025-10-31",
+      "description": "Birthday",
+      "color": "#52c41a",
+      "calendarType": "birthdays"
+    },
+    {
+      "id": 6,
+      "title": "Albert Mullen Appointment",
+      "type": "meetings",
+      "date": "2025-11-17",
+      "startTime": "17:30",
+      "endTime": "18:30",
+      "description": "Follow-up meeting",
+      "attendees": ["Albert Mullen"],
+      "location": "Office",
+      "color": "#5C2190",
+      "calendarType": "personal"
+    },
+    {
+      "id": 7,
+      "title": "Papy Chulo 🎂",
+      "type": "birthdays",
+      "date": "2025-11-19",
+      "description": "Birthday",
+      "color": "#52c41a",
+      "calendarType": "birthdays"
+    },
+    {
+      "id": 8,
+      "title": "Albert Mullen Appointment",
+      "type": "meetings",
+      "date": "2025-11-22",
+      "startTime": "17:30",
+      "endTime": "18:30",
+      "description": "Quarterly review",
+      "attendees": ["Albert Mullen"],
+      "location": "Office",
+      "color": "#5C2190",
+      "calendarType": "personal"
+    },
+    {
+      "id": 9,
+      "title": "Mr Cabanna & Mar 🎂",
+      "type": "birthdays",
+      "date": "2025-11-22",
+      "description": "Birthday",
+      "color": "#52c41a",
+      "calendarType": "birthdays"
+    },
+    {
+      "id": 10,
+      "title": "Morning Standup",
+      "type": "meetings",
+      "date": "2025-10-31",
+      "startTime": "09:00",
+      "endTime": "09:30",
+      "description": "Daily standup meeting with the development team",
+      "attendees": ["Development Team", "Project Manager"],
+      "location": "Conference Room A",
+      "color": "#5C2190",
+      "calendarType": "meetings"
+    },
+    {
+      "id": 11,
+      "title": "Client Call",
+      "type": "meetings",
+      "date": "2025-10-31",
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "description": "Quarterly review call with key client",
+      "attendees": ["Sarah Williams", "Mike Johnson", "Client Representative"],
+      "location": "Virtual Meeting",
+      "color": "#1890ff",
+      "calendarType": "meetings"
+    },
+    {
+      "id": 12,
+      "title": "Lunch & Learn: AI Trends",
+      "type": "reminders",
+      "date": "2025-10-31",
+      "startTime": "12:30",
+      "endTime": "13:30",
+      "description": "Lunch and learn session about latest AI trends",
+      "attendees": ["All Employees"],
+      "location": "Main Conference Room",
+      "color": "#fa8c16",
+      "calendarType": "reminders"
+    },
+    {
+      "id": 13,
+      "title": "Sprint Retrospective",
+      "type": "meetings",
+      "date": "2025-10-31",
+      "startTime": "14:00",
+      "endTime": "15:30",
+      "description": "End of sprint retrospective",
+      "attendees": ["Product Team", "Development Team"],
+      "location": "Team Room",
+      "color": "#5C2190",
+      "calendarType": "meetings"
+    },
+    {
+      "id": 14,
+      "title": "Performance Review",
+      "type": "tasks",
+      "date": "2025-10-31",
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "description": "One-on-one performance review discussion",
+      "attendees": ["Manager", "Employee"],
+      "location": "Private Office",
+      "color": "#eb2f96",
+      "calendarType": "tasks"
+    }
+  ],
+  "holidays": [],
+  "festivals": []
+}

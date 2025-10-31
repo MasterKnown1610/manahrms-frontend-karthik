@@ -1,6 +1,85 @@
 @import '../../styles/variables.scss';
 
-.calendar {
+.calendar-screen {
   padding: $spacing-lg;
-}
+  background-color: $white;
+  min-height: calc(100vh - 100px);
 
+  .ant-picker-calendar {
+    background: $white;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+  }
+
+  .ant-picker-calendar-header {
+    padding: $spacing-md 0;
+  }
+
+  .ant-picker-calendar-date {
+    min-height: 100px;
+    padding: 8px;
+  }
+
+  .ant-picker-calendar-date-content {
+    height: auto;
+    min-height: 60px;
+  }
+
+  &__events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__event-item {
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+    
+    .ant-badge {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .ant-badge-status-dot {
+      width: 8px;
+      height: 8px;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }
+    
+    .ant-badge-status-text {
+      font-size: 12px;
+      margin-left: 0;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+
+  &__event-text {
+    font-size: 12px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  &__more-events {
+    margin-top: 4px;
+  }
+
+  &__more-text {
+    font-size: 11px;
+    color: $primary;
+    font-weight: 600;
+    padding: 2px 6px;
+    background-color: $primary + '15';
+    border-radius: 4px;
+    display: inline-block;
+  }
+}
