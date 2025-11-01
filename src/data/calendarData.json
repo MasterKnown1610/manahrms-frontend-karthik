@@ -209,5 +209,43 @@
     }
   ],
   "holidays": [],
-  "festivals": []
+  "festivals": [],
+  "disciplinaryEvents": [
+    {
+      "id": 1,
+      "employee": "Kamaljit singh",
+      "natureOfInfraction": "Dummy text",
+      "infractionDate": "2018-12-12",
+      "warningType": "Dummy text",
+      "status": "Active",
+      "createdOn": "2018-12-12"
+    },
+    {
+      "id": 2,
+      "employee": "Ajajpal Sharma",
+      "natureOfInfraction": "Dummy text",
+      "infractionDate": "2018-12-12",
+      "warningType": "Dummy text",
+      "status": "Active",
+      "createdOn": "2018-12-12"
+    },
+    {
+      "id": 3,
+      "employee": "John Doe",
+      "natureOfInfraction": "Late arrival",
+      "infractionDate": "2025-11-10",
+      "warningType": "Verbal Warning",
+      "status": "Active",
+      "createdOn": "2025-11-10"
+    },
+    {
+      "id": 4,
+      "employee": "Jane Smith",
+      "natureOfInfraction": "Unauthorized absence",
+      "infractionDate": "2025-11-20",
+      "warningType": "Written Warning",
+      "status": "Active",
+      "createdOn": "2025-11-20"
+    }
+  ]
 }

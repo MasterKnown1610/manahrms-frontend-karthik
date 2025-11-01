@@ -2,84 +2,286 @@
 
 .calendar-screen {
   padding: $spacing-lg;
-  background-color: $white;
+  background-color: $background;
   min-height: calc(100vh - 100px);
 
+  // Calendar container
   .ant-picker-calendar {
     background: $white;
     border-radius: $radius-lg;
     padding: $spacing-lg;
+    margin-bottom: $spacing-lg;
+    box-shadow: $shadow-md;
   }
 
-  .ant-picker-calendar-header {
-    padding: $spacing-md 0;
+  // Custom header styling
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md $spacing-lg;
+    margin-bottom: $spacing-md;
+
+    &-left {
+      flex: 1;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: $spacing-lg;
+    }
   }
 
+  &__month-year {
+    font-size: 32px;
+    font-weight: 700;
+    color: $primary;
+    margin: 0;
+  }
+
+  &__nav-controls {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__nav-btn {
+    background: none;
+    border: none;
+    color: $text-secondary;
+    font-size: 14px;
+    cursor: pointer;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $primary;
+      background-color: rgba($primary, 0.1);
+    }
+  }
+
+  &__nav-separator {
+    color: $text-light;
+  }
+
+  &__view-tabs {
+    .ant-tabs-tab {
+      padding: $spacing-xs $spacing-md;
+      font-weight: 500;
+      color: $text-secondary;
+
+      &.ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+          color: $primary;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      background: $primary;
+    }
+  }
+
+  // Calendar date cells
   .ant-picker-calendar-date {
-    min-height: 100px;
+    min-height: 80px;
     padding: 8px;
+    position: relative;
   }
 
   .ant-picker-calendar-date-content {
     height: auto;
-    min-height: 60px;
+    min-height: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
-  &__events-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  // Event dots
+  &__event-dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+    align-items: center;
   }
 
-  &__event-item {
-    margin: 2px 0;
+  &__event-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  // Highlight selected date
+  .ant-picker-calendar-date-selected {
+    .ant-picker-calendar-date-value {
+      background: linear-gradient(135deg, $primary 0%, #3B82F6 100%);
+      color: $white;
+      border-radius: 50%;
+      font-weight: 600;
+    }
+
+    .ant-picker-calendar-date {
+      background: linear-gradient(135deg, rgba($primary, 0.15) 0%, rgba(#3B82F6, 0.15) 100%);
+      border: 2px solid rgba($primary, 0.3);
+      border-radius: $radius-sm;
+    }
+
+    &:hover {
+      .ant-picker-calendar-date {
+        background: linear-gradient(135deg, rgba($primary, 0.2) 0%, rgba(#3B82F6, 0.2) 100%);
+      }
+    }
+  }
+
+  // Today's date styling
+  .ant-picker-calendar-date-today {
+    .ant-picker-calendar-date-value {
+      font-weight: 600;
+      border: 2px solid $primary;
+    }
+  }
+
+  // Legend
+  &__legend {
+    display: flex;
+    gap: $spacing-lg;
+    padding: $spacing-md $spacing-lg;
+    margin-bottom: $spacing-lg;
+    background: $white;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    flex-wrap: wrap;
+  }
+
+  &__legend-item {
     display: flex;
     align-items: center;
-    
-    .ant-badge {
-      display: flex;
-      align-items: center;
-      width: 100%;
-    }
-    
-    .ant-badge-status-dot {
-      width: 8px;
-      height: 8px;
-      margin-right: 6px;
-      flex-shrink: 0;
-    }
-    
-    .ant-badge-status-text {
-      font-size: 12px;
-      margin-left: 0;
-      display: flex;
-      align-items: center;
-      flex: 1;
+    gap: $spacing-sm;
+  }
+
+  &__legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  &__legend-label {
+    font-size: 14px;
+    color: $text-primary;
+    font-weight: 500;
+  }
+
+  // Table sections
+  &__table-section {
+    background: $white;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    margin-bottom: $spacing-lg;
+    box-shadow: $shadow-md;
+  }
+
+  &__table-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $primary;
+    margin: 0 0 $spacing-md 0;
+  }
+
+  // Table styling
+  &__table {
+    .ant-table {
+      border-radius: $radius-md;
       overflow: hidden;
     }
+
+    .ant-table-thead > tr > th {
+      background: $primary-dark;
+      color: $white;
+      font-weight: 600;
+      padding: $spacing-md;
+      border: none;
+      font-size: 14px;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: $spacing-md;
+      border-bottom: 1px solid $secondary;
+      font-size: 14px;
+    }
+
+    .ant-table-tbody > tr {
+      &:hover {
+        background-color: rgba($primary, 0.05);
+      }
+
+      &:last-child > td {
+        border-bottom: none;
+      }
+    }
+
+    .ant-table-tbody > tr:nth-child(even) {
+      background-color: $white;
+    }
   }
 
-  &__event-text {
-    font-size: 12px;
-    line-height: 1.5;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
-    max-width: 100%;
+  // Table actions
+  &__table-actions {
+    display: flex;
+    gap: $spacing-md;
   }
 
-  &__more-events {
-    margin-top: 4px;
+  &__action-edit {
+    color: $success;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: darken($success, 10%);
+      text-decoration: underline;
+    }
   }
 
-  &__more-text {
-    font-size: 11px;
-    color: $primary;
+  &__action-delete {
+    color: $error;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: darken($error, 10%);
+      text-decoration: underline;
+    }
+  }
+
+  // Calendar panel styling
+  .ant-picker-calendar-header {
+    padding: 0;
+  }
+
+  .ant-picker-calendar-month-select,
+  .ant-picker-calendar-year-select {
+    display: none;
+  }
+
+  // Remove default Ant Design calendar header
+  .ant-picker-calendar-header {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  // Weekday headers
+  .ant-picker-calendar-column-header {
+    padding: $spacing-md 0;
     font-weight: 600;
-    padding: 2px 6px;
-    background-color: $primary + '15';
-    border-radius: 4px;
-    display: inline-block;
+    color: $text-primary;
   }
 }
