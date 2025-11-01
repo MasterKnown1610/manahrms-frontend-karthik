@@ -25,7 +25,98 @@
     "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
     "joinDate": "2019-11-05",
     "phone": "+1 234-567-0002",
-    "isManager": true
+    "isManager": true,
+    "gender": "Female",
+    "birthday": "1985-03-15",
+    "address": {
+      "street": "Jl. Diponegoro No. 21",
+      "city": "San Francisco",
+      "zipCode": "94102"
+    },
+    "experiences": [
+      {
+        "companyName": "TechCorp Solutions",
+        "jobTitle": "Engineering Manager",
+        "startDate": "2019-11-05",
+        "endDate": null,
+        "isCurrent": true,
+        "manager": "CEO Executive",
+        "description": "Leading engineering teams and managing product development"
+      },
+      {
+        "companyName": "GlobalTech Inc.",
+        "jobTitle": "Senior Software Engineer",
+        "startDate": "2016-05-10",
+        "endDate": "2019-10-30",
+        "isCurrent": false,
+        "manager": "John Smith",
+        "description": "Developed scalable web applications and led technical initiatives"
+      },
+      {
+        "companyName": "StartupXYZ",
+        "jobTitle": "Software Engineer",
+        "startDate": "2014-01-15",
+        "endDate": "2016-04-30",
+        "isCurrent": false,
+        "manager": "Mike Johnson",
+        "description": "Built core product features and improved system performance"
+      }
+    ],
+    "payroll": [
+      {
+        "companyName": "TechCorp Solutions",
+        "isCurrent": true,
+        "basicSalary": 150000,
+        "allowances": 20000,
+        "deductions": 15000,
+        "netSalary": 155000,
+        "paymentDate": "Monthly - 1st"
+      },
+      {
+        "companyName": "GlobalTech Inc.",
+        "isCurrent": false,
+        "basicSalary": 120000,
+        "allowances": 15000,
+        "deductions": 12000,
+        "netSalary": 123000,
+        "paymentDate": "Monthly - 1st"
+      }
+    ],
+    "payslips": [
+      {
+        "name": "Payslip_November_2024.pdf",
+        "size": "245kb"
+      },
+      {
+        "name": "Payslip_October_2024.pdf",
+        "size": "243kb"
+      },
+      {
+        "name": "Payslip_September_2024.pdf",
+        "size": "241kb"
+      }
+    ],
+    "notes": [
+      {
+        "text": "This employee is lorem ipsum dolor sit amet. Has excellent leadership skills.",
+        "author": "Dr. Sarah Manager",
+        "date": "15 Nov 2024"
+      }
+    ],
+    "documents": [
+      {
+        "name": "Employment Contract.pdf",
+        "size": "156kb"
+      },
+      {
+        "name": "Performance Review 2024.pdf",
+        "size": "189kb"
+      },
+      {
+        "name": "Resume.pdf",
+        "size": "98kb"
+      }
+    ]
   },
   {
     "id": 3,
@@ -235,7 +326,81 @@
     "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Robert",
     "joinDate": "2022-04-10",
     "phone": "+1 234-567-0101",
-    "isManager": false
+    "isManager": false,
+    "gender": "Male",
+    "birthday": "1992-07-22",
+    "address": {
+      "street": "123 Main Street",
+      "city": "New York",
+      "zipCode": "10001"
+    },
+    "experiences": [
+      {
+        "companyName": "TechCorp Solutions",
+        "jobTitle": "Senior Backend Developer",
+        "startDate": "2022-04-10",
+        "endDate": null,
+        "isCurrent": true,
+        "manager": "John Doe",
+        "description": "Building scalable backend systems and APIs"
+      },
+      {
+        "companyName": "DataFlow Systems",
+        "jobTitle": "Backend Developer",
+        "startDate": "2019-08-01",
+        "endDate": "2022-03-31",
+        "isCurrent": false,
+        "manager": "Jane Williams",
+        "description": "Developed RESTful APIs and microservices"
+      }
+    ],
+    "payroll": [
+      {
+        "companyName": "TechCorp Solutions",
+        "isCurrent": true,
+        "basicSalary": 120000,
+        "allowances": 10000,
+        "deductions": 10000,
+        "netSalary": 120000,
+        "paymentDate": "Monthly - 1st"
+      },
+      {
+        "companyName": "DataFlow Systems",
+        "isCurrent": false,
+        "basicSalary": 95000,
+        "allowances": 8000,
+        "deductions": 8500,
+        "netSalary": 94500,
+        "paymentDate": "Monthly - 1st"
+      }
+    ],
+    "payslips": [
+      {
+        "name": "Payslip_November_2024.pdf",
+        "size": "198kb"
+      },
+      {
+        "name": "Payslip_October_2024.pdf",
+        "size": "197kb"
+      }
+    ],
+    "notes": [
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "author": "John Doe",
+        "date": "10 Nov 2024"
+      }
+    ],
+    "documents": [
+      {
+        "name": "Employment Contract.pdf",
+        "size": "142kb"
+      },
+      {
+        "name": "ID Document.pdf",
+        "size": "87kb"
+      }
+    ]
   },
   {
     "id": 102,

@@ -7,6 +7,7 @@ import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
 import Dashboard from './screens/Dashboard/Dashboard';
 import Employee from './screens/Employee/Employee';
+import EmployeeProfile from './screens/EmployeeProfile/EmployeeProfile';
 import OrganizationChart from './screens/OrganizationChart/OrganizationChart';
 import Task from './screens/Task/Task';
 import Report from './screens/Report/Report';
@@ -37,6 +38,7 @@ function App() {
               <Route element={<Layout />}>
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/employee" element={<Employee />} />
+                <Route path="/employee/:id" element={<EmployeeProfile />} />
                 <Route path="/task" element={<Task />} />
                 <Route path="/report" element={<Report />} />
                 <Route path="/calendar" element={<Calendar />} />

@@ -1,25 +1,27 @@
-import { useState } from 'react';
-import { Table, Input, Select, Button, Space, Avatar, Tag } from 'antd';
-import { MdSearch, MdFilterList, MdAdd, MdEdit, MdDelete } from 'react-icons/md';
-import { useTheme } from '../../../contexts/ThemeContext';
-import employeesData from '../../../data/employeesData.json';
-import './EmployeeList.scss';
+import { useState } from "react";
+import { Table, Input, Select, Button, Space, Avatar, Tag } from "antd";
+import { useNavigate } from "react-router-dom";
+import { MdSearch, MdFilterList, MdAdd } from "react-icons/md";
+import { useTheme } from "../../../contexts/ThemeContext";
+import employeesData from "../../../data/employeesData.json";
+import "./EmployeeList.scss";
 
 const { Option } = Select;
 const { Search } = Input;
 
 const EmployeeList = () => {
   const { theme } = useTheme();
-  const [searchText, setSearchText] = useState('');
+  const navigate = useNavigate();
+  const [searchText, setSearchText] = useState("");
 
   // Use data from JSON file
   const employees = employeesData;
 
   const columns = [
     {
-      title: 'Employee',
-      dataIndex: 'name',
-      key: 'name',
+      title: "Employee",
+      dataIndex: "name",
+      key: "name",
       render: (text, record) => (
         <div className="employee-list__employee-cell">
           <Avatar src={record.avatar} size={40} />
@@ -31,72 +33,51 @@ const EmployeeList = () => {
       ),
     },
     {
-      title: 'Role',
-      dataIndex: 'role',
-      key: 'role',
+      title: "Role",
+      dataIndex: "role",
+      key: "role",
       render: (text) => (
-        <Tag color={theme.colors.primary} style={{ borderRadius: '4px' }}>
+        <Tag color={theme.colors.primary} style={{ borderRadius: "4px" }}>
           {text}
         </Tag>
       ),
     },
     {
-      title: 'Department',
-      dataIndex: 'department',
-      key: 'department',
+      title: "Department",
+      dataIndex: "department",
+      key: "department",
     },
     {
-      title: 'Manager',
-      dataIndex: 'manager',
-      key: 'manager',
+      title: "Manager",
+      dataIndex: "manager",
+      key: "manager",
     },
     {
-      title: 'Status',
-      dataIndex: 'status',
-      key: 'status',
+      title: "Status",
+      dataIndex: "status",
+      key: "status",
       render: (text) => (
         <Tag
-          color={text === 'Active' ? theme.colors.success : theme.colors.error}
-          style={{ borderRadius: '4px' }}
+          color={text === "Active" ? theme.colors.success : theme.colors.error}
+          style={{ borderRadius: "4px" }}
         >
           {text}
         </Tag>
       ),
     },
     {
-      title: 'Join Date',
-      dataIndex: 'joinDate',
-      key: 'joinDate',
-    },
-    {
-      title: 'Actions',
-      key: 'actions',
-      render: () => (
-        <Space>
-          <Button
-            type="text"
-            icon={<MdEdit />}
-            style={{ color: theme.colors.primary }}
-          >
-            Edit
-          </Button>
-          <Button
-            type="text"
-            icon={<MdDelete />}
-            danger
-          >
-            Delete
-          </Button>
-        </Space>
-      ),
+      title: "Join Date",
+      dataIndex: "joinDate",
+      key: "joinDate",
     },
   ];
 
-  const filteredEmployees = employees.filter((emp) =>
-    emp.name.toLowerCase().includes(searchText.toLowerCase()) ||
-    emp.email.toLowerCase().includes(searchText.toLowerCase()) ||
-    emp.role.toLowerCase().includes(searchText.toLowerCase()) ||
-    emp.department.toLowerCase().includes(searchText.toLowerCase())
+  const filteredEmployees = employees.filter(
+    (emp) =>
+      emp.name.toLowerCase().includes(searchText.toLowerCase()) ||
+      emp.email.toLowerCase().includes(searchText.toLowerCase()) ||
+      emp.role.toLowerCase().includes(searchText.toLowerCase()) ||
+      emp.department.toLowerCase().includes(searchText.toLowerCase())
   );
 
   return (
@@ -134,10 +115,7 @@ const EmployeeList = () => {
             <Option value="Active">Active</Option>
             <Option value="Inactive">Inactive</Option>
           </Select>
-          <Button
-            icon={<MdFilterList />}
-            size="large"
-          >
+          <Button icon={<MdFilterList />} size="large">
             More Filters
           </Button>
         </div>
@@ -164,6 +142,12 @@ const EmployeeList = () => {
             showSizeChanger: true,
             showTotal: (total) => `Total ${total} employees`,
           }}
+          onRow={(record) => ({
+            onClick: () => {
+              navigate(`/employee/${record.id}`);
+            },
+            style: { cursor: "pointer" },
+          })}
         />
       </div>
     </div>
@@ -171,4 +155,3 @@ const EmployeeList = () => {
 };
 
 export default EmployeeList;
-

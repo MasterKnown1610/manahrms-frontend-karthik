@@ -1,0 +1,487 @@
+@import "../../styles/variables.scss";
+
+.employee-profile {
+  background-color: $background;
+  min-height: calc(100vh - 100px);
+
+  &__back-btn {
+    margin-bottom: $spacing-lg;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $text-secondary;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__not-found {
+    text-align: center;
+    padding: $spacing-2xl;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: $spacing-lg;
+    align-items: start;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    position: sticky;
+    top: $spacing-lg;
+  }
+
+  // Overview Card
+  &__overview-card {
+    .ant-card-body {
+      padding: $spacing-xl;
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: $spacing-xl;
+    align-items: flex-start;
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+  }
+
+  &__header-info {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 $spacing-xs 0;
+  }
+
+  &__email {
+    font-size: 16px;
+    color: $text-secondary;
+    margin-bottom: $spacing-md;
+  }
+
+  &__summary {
+    display: flex;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__summary-label {
+    font-size: 12px;
+    color: $text-secondary;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__summary-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__message-btn {
+    margin-top: $spacing-md;
+  }
+
+  // Info Card
+  &__info-card {
+    .ant-card-body {
+      padding: $spacing-xl;
+    }
+  }
+
+  &__card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0 0 $spacing-lg 0;
+  }
+
+  &__info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-lg;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info-column {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__info-label {
+    font-size: 12px;
+    color: $text-secondary;
+    font-weight: 500;
+  }
+
+  &__info-value {
+    font-size: 14px;
+    color: $text-primary;
+    font-weight: 500;
+  }
+
+  // Content Card
+  &__content-card {
+    .ant-card-body {
+      padding: $spacing-xl;
+    }
+  }
+
+  &__tabs {
+    .ant-tabs-tab {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .ant-tabs-tab-active {
+      .ant-tabs-tab-btn {
+        color: $primary;
+        font-weight: 600;
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      background: $primary;
+    }
+  }
+
+  // Experience Section
+  &__current-experience {
+    margin-bottom: $spacing-lg;
+  }
+
+  &__experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+  }
+
+  &__experience-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__show-previous-btn {
+    color: $primary;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__timeline-item {
+    padding-left: $spacing-md;
+  }
+
+  &__timeline-date {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__timeline-time {
+    font-size: 12px;
+    color: $text-secondary;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__timeline-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__timeline-company {
+    font-size: 14px;
+    color: $text-secondary;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__timeline-manager {
+    font-size: 13px;
+    color: $text-secondary;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__timeline-description {
+    font-size: 13px;
+    color: $text-secondary;
+    margin-top: $spacing-sm;
+    line-height: 1.6;
+  }
+
+  // Payroll Section
+  &__payroll-section {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__payroll-card {
+    .ant-card-body {
+      padding: $spacing-lg;
+    }
+  }
+
+  &__payroll-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+  }
+
+  &__payroll-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__payroll-info {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__payroll-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-sm 0;
+    border-bottom: 1px solid $secondary;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__payroll-label {
+    font-size: 14px;
+    color: $text-secondary;
+  }
+
+  &__payroll-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-primary;
+
+    &--net {
+      font-size: 16px;
+      color: $primary;
+    }
+  }
+
+  // Payslips Section
+  &__payslips-section {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__payslip-card {
+    .ant-card-body {
+      padding: $spacing-md;
+    }
+  }
+
+  &__payslip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__payslip-info {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    flex: 1;
+  }
+
+  &__payslip-icon {
+    font-size: 24px;
+    color: $primary;
+  }
+
+  &__payslip-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  &__payslip-size {
+    font-size: 12px;
+    color: $text-secondary;
+  }
+
+  // Notes Card
+  &__notes-card {
+    .ant-card-body {
+      padding: $spacing-lg;
+    }
+  }
+
+  &__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+  }
+
+  &__card-header .employee-profile__card-title {
+    margin: 0;
+  }
+
+  &__see-all-link {
+    padding: 0;
+    color: $primary;
+  }
+
+  &__note-input {
+    margin-bottom: $spacing-md;
+  }
+
+  &__save-note-btn {
+    width: 100%;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__previous-notes {
+    border-top: 1px solid $secondary;
+    padding-top: $spacing-md;
+  }
+
+  &__note-item {
+    margin-bottom: $spacing-md;
+  }
+
+  &__note-text {
+    font-size: 14px;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+    line-height: 1.6;
+  }
+
+  &__note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: $text-secondary;
+  }
+
+  &__note-author {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__note-date {
+    color: $text-light;
+  }
+
+  // Files Card
+  &__files-card {
+    .ant-card-body {
+      padding: $spacing-lg;
+    }
+  }
+
+  &__files-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__file-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-md;
+    border: 1px solid $secondary;
+    border-radius: $radius-md;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $background;
+      border-color: $primary;
+    }
+  }
+
+  &__file-icon {
+    font-size: 24px;
+    color: $primary;
+    flex-shrink: 0;
+  }
+
+  &__file-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__file-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-primary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__file-size {
+    font-size: 12px;
+    color: $text-secondary;
+  }
+
+  &__file-actions {
+    flex-shrink: 0;
+  }
+
+  // Empty State
+  &__empty-state {
+    text-align: center;
+    padding: $spacing-xl;
+    color: $text-secondary;
+    font-size: 14px;
+  }
+}
