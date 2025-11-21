@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .register {
   min-height: 100vh;
@@ -84,6 +84,20 @@
     text-align: center;
   }
 
+  &__section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $secondary;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
   &__field {
     margin-bottom: $spacing-lg;
   }
@@ -127,7 +141,7 @@
     color: $text-secondary;
     cursor: pointer;
 
-    input[type='checkbox'] {
+    input[type="checkbox"] {
       width: 16px;
       height: 16px;
       cursor: pointer;
@@ -181,4 +195,3 @@
     }
   }
 }
-
